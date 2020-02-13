@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<style-->
+<!--&gt;-->
+<!--* {box-sizing: border-box}-->
+
+<!--/* Set height of body and the document to 100% */-->
+<!--body, html {-->
+<!--  height: 100%;-->
+<!--  margin: 0;-->
+<!--  font-family: Arial;-->
+<!--}-->
+
+<!--/* Style tab links */-->
+<!--.tablink {-->
+<!--  background-color: #555;-->
+<!--  color: white;-->
+<!--  float: left;-->
+<!--  border: none;-->
+<!--  outline: none;-->
+<!--  cursor: pointer;-->
+<!--  padding: 14px 16px;-->
+<!--  font-size: 17px;-->
+<!--  width: 25%;-->
+<!--}-->
+
+
+<!--/* Style the tab content (and add height:100% for full page content) */-->
+<!--.tabcontent {-->
+<!--  color: white;-->
+<!--  display: none;-->
+<!--  padding: 100px 20px;-->
+<!--  height: 100%;-->
+<!--}-->
+
+<!--#Home {background-color: red;};-->
+<!--#News {background-color: green;}-->
+<!--#Contact {background-color: blue;}-->
+<!--#About {-->
+<!--    background-color: orange;-->
+<!--    background-image: url('/static/img/product/acer.jpg');-->
+<!--}-->
+
+<!--</style>-->
+
+<!--<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>-->
+<!--<button class="tablink" onclick="openPage('News', this, 'green')">News</button>-->
+<!--<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>-->
+<!--<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>-->
+
+<!--<div id="Home" class="tabcontent ">-->
+<!--  <h3>Home</h3>-->
+<!--  <p>Home is where the heart is..</p>-->
+<!--</div>-->
+
+<!--<div id="News" class="tabcontent">-->
+<!--  <h3>News</h3>-->
+<!--  <p>Some news this fine day!</p>-->
+<!--</div>-->
+
+<!--<div id="Contact" class="tabcontent">-->
+<!--  <h3>Contact</h3>-->
+<!--  <p>Get in touch, or swing by for a cup of coffee.</p>-->
+<!--</div>-->
+
+<!--<div id="About" class="tabcontent">-->
+<!--  <h3>About</h3>-->
+<!--  <p>Who we are and what we do.</p>-->
+<!--</div>-->
+
+
+
+<!--<script-->
+<!--&gt;-->
+<!--function openPage(pageName,elmnt,color) {-->
+<!--  var i, tabcontent, tablinks;-->
+<!--  tabcontent = document.getElementsByClassName("tabcontent");-->
+<!--  for (i = 0; i < tabcontent.length; i++) {-->
+<!--    tabcontent[i].style.display = "none";-->
+<!--  }-->
+<!--  tablinks = document.getElementsByClassName("tablink");-->
+<!--  for (i = 0; i < tablinks.length; i++) {-->
+<!--    tablinks[i].style.backgroundColor = "";-->
+<!--  }-->
+<!--  document.getElementById(pageName).style.display = "block";-->
+<!--  elmnt.style.backgroundColor = color;-->
+<!--}-->
+
+<!--// Get the element with id="defaultOpen" and click on it-->
+<!--document.getElementById("defaultOpen").click();-->
+<!--</script>-->
+
+
+
+<div class="navbar product-area pt-15">
+    <div class="container">
+<!--        <div class="row">-->
+            {% for prod in products %}
+                <div class="product col">
+                    {% with image_static='img/products/'|add:prod.name|lower|add:'.jpg' %}
+                        <img class="d-block w-400"  src="{% static image_static %}"
+                             alt="First slide" width="300" height="250">
+                    {% endwith %}
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <nav class="carousel-inner">
+                            <div class="pro-content">
+<!--                                            <img class="d-block w-400"  src="/static/img/products/{{ prod.name|lower }}.jpg" width="250" height="250">-->
+                                <h4><a href="/product/{{ prod.name|lower
+                                 }}">{{ prod.name }}</a></h4>
+                                <p><span class="price">{{ prod.price }}</span>
+                                    <del class="prev-price">$32.00</del>
+                                </p>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            {% endfor %}            <!-- Product Image End -->
+            <!-- Product Content Start -->
+
+            <!-- Product Content End -->
+        </div>
+    </div>
+{% endblock %}

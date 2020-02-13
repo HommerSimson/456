@@ -1,0 +1,190 @@
+<!doctype html>
+{% load static %}
+
+<html class="no-js" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home E-Store</title>
+    <link rel="shortcut icon" type="image/x-icon" href=img/icon/favicon.png">
+    <!-- Google Font css -->
+    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
+    <!-- mobile menu css -->
+    <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- nivo slider css -->
+    <link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">
+    <!--     owl carousel css-->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!--     slick css-->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <!--     price slider css-->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+    <!--     fontawesome css-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <!--      fancybox css-->
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- default css  -->
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- modernizr js -->
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+</head>
+<body>
+
+
+<!--Header top-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-gray">
+    <a class="navbar-brand" href="#"><a href="index.html"><img src="{% static 'img/logo/logo.png' %}" alt="logo-image"></a></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-4 mt-lg-6">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Kyrgyz</a>
+                        <a class="dropdown-item" href="#">Russian</a>
+                        <a class="dropdown-item" href="#">English</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Currency
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Som</a>
+                        <a class="dropdown-item" href="#">Dollar</a>
+                        <a class="dropdown-item" href="#">Euro</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Product">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+</nav>
+<!-- header top end -->
+
+
+{% block content %}
+Empty content block
+{% endblock %}
+
+
+<!-- Footer start -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light position: fixed-bottom">
+                <!-- Single Footer Start -->
+                <div class="col-lg-4  col-md-7 col-sm-6">
+                        <h3>Contact us</h3>
+                        <div class="footer-content">
+                            <div class="loc-address">
+                                <span><i class="fa fa-map-marker"></i>184 Main Rd</span>
+                                <span><i class="fa fa-envelope-o"></i>Mail Us</span>
+                                <span><i class="fa fa-phone"></i>Phone: 777 777 </span>
+                            </div>
+                            <div class="payment-mth"><a href="#"><img class="img" src="{% static 'img/footer/1.png' %}"
+                                alt="payment-image"></a></div>
+                        </div>
+                </div>
+            <!-- Single Footer Start -->
+            <div class="col-lg-2  col-md-5 col-sm-6 footer-full">
+                <div class="row">
+                    <div class="footer-content">
+                        <ul class="footer-list">
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Order History</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Footer Start -->
+            <!-- Single Footer Start -->
+            <div class="col-lg-2 col-md-4 col-sm-6 footer-full">
+                <div class="row">
+                    <div class="footer-content">
+                        <ul class="footer-list">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Order status</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Footer Start -->
+            <div class="col-lg-2 col-md-4 col-sm-6 footer-full">
+                <div class="row">
+                    <div class="footer-content">
+                        <ul class="footer-list">
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Footer Start -->
+            <div class="col-lg-2 col-md-4 col-sm-6 footer-full">
+                <div class="row">
+                    <div class="footer-content">
+                        <ul class="footer-list">
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- Single Footer End -->
+</nav>
+<!-- Row End -->
+<!-- Container End -->
+<!-- Footer Top End -->
+<!-- Wrapper End -->
+
+
+<!-- H/P start -->
+<!-- jquery 3.12.4 -->
+<script src='{% static " js/vendor/jquery-1.12.4.min.js" %}'></script>
+<!-- mobile menu js  -->
+<script src='{% static "js/jquery.meanmenu.min.js"%}'></script>
+<!-- scroll-up js -->
+<script src='{% static "js/jquery.scrollUp.js"%}'></script>
+<!-- owl-carousel js -->
+<script src='{% static "js/owl.carousel.min.js"%}'></script>
+<!-- slick js -->
+<script src='{% static "js/slick.min.js"%}'></script>
+<!-- wow js -->
+<script src='{% static "js/wow.min.js"%}'></script>
+<!-- price slider js -->
+<script src='{% static "js/jquery-ui.min.js"%}'></script>
+<script src='{% static "js/jquery.countdown.min.js"%}'></script>
+<!-- nivo slider js -->
+<script src='{% static "js/jquery.nivo.slider.js"%}'></script>
+<!-- fancybox js -->
+<script src='{% static "js/jquery.fancybox.min.js"%}'></script>
+<!-- bootstrap -->
+<script src='{% static "js/bootstrap.min.js"%}'></script>
+<!-- popper -->
+<script src='{% static "js/popper.js"%}'></script>
+<!-- plugins -->
+<script src='{% static "js/plugins.js"%}'></script>
+<!-- main js -->
+<script src='{% static "js/main.js"%}'></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Product Area Start -->
+    <div class="product-area pt-30">
+        <div class="container">
+            <div class="row">
+                <!-- Single Product Start -->
+                <div class="col-lg-15 col-sm-10">
+                    <div class="single-product">
+                        <div class="pro-img">
+                            <a href="single-image">
+                                {% with image_static='img/products/'|add:product.name|lower|add:'.jpg' %}
+                                    <img class="primary-img" height="300" src="{% static image_static %}" alt="single-product">
+                                {% endwith %}
+                            </a>
+                            <p>
+                                <h4>{{ product.name }}</h4>
+                                <span class="price">${{ product.price }}</span>
+                                <del class="prev-price">$32.00</del>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
