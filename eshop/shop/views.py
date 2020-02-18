@@ -5,10 +5,12 @@ register = template.Library()
 
 # Create your views here.
 products = [
-    {'name': 'Lenovo', 'price': '500', 'img': 'lenovo.jpg', 'discount': True},
+    {'name': 'Lenovo', 'price': '500', 'img': ['lenovo.jpg', 'lenovo2.jpg'], 'discount': True},
     {'name': 'Acer', 'price': '600', 'img': 'acer.jpg'},
     {'name': 'Asus', 'price': '700', 'img': 'asus.jpg'},
     {'name': 'Samsung', 'price': '900', 'img': 'samsung.jpeg'},
+    {'name': 'HP', 'price': '700', 'img': 'HP.jpg'},
+    {'name': 'Oracl', 'price': '700', 'img': 'Oracl.jpg'},
 ]
 
 
@@ -19,7 +21,6 @@ def startpage(request):
         'index.html',
        context
       )
-
 
 def product(request, name,):
     prod = {}

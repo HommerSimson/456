@@ -99,26 +99,26 @@
 
 <div class="navbar product-area pt-15">
     <div class="container">
-<!--        <div class="row">-->
             {% for prod in products %}
-                <div class="product col">
-                    {% with image_static='img/products/'|add:prod.name|lower|add:'.jpg' %}
-                        <img class="d-block w-400"  src="{% static image_static %}"
-                             alt="First slide" width="300" height="250">
-                    {% endwith %}
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <nav class="carousel-inner">
-                            <div class="pro-content">
-<!--                                            <img class="d-block w-400"  src="/static/img/products/{{ prod.name|lower }}.jpg" width="250" height="250">-->
-                                <h4><a href="/product/{{ prod.name|lower
-                                 }}">{{ prod.name }}</a></h4>
-                                <p><span class="price">{{ prod.price }}</span>
-                                    <del class="prev-price">$32.00</del>
-                                </p>
-                            </div>
-                        </nav>
+                <a href="tool1.html">
+                    <div class="product col">
+                        {% with image_static='img/products/'|add:prod.name|lower|add:'.jpg' %}
+                            <img class="d-block w-400" src="{% static image_static %}"
+                                 alt="First slide" width="350" height="300">
+                        {% endwith %}
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <nav class="carousel-inner">
+                                <div class="pro-content">
+    <!--                                            <img class="d-block w-400"  src="/static/img/products/{{ prod.name|lower }}.jpg" width="250" height="250">-->
+                                    <h4><a href="/product/{{ prod.name|lower }}">{{ prod.name }}</a></h4>
+                                    <p><span class="price">{{ prod.price }}</span>
+                                        <del class="prev-price">$32.00</del>
+                                    </p>
+                                </div>
+                            </nav>
+                        </div>
                     </div>
-                </div>
+                </a>
             {% endfor %}            <!-- Product Image End -->
             <!-- Product Content Start -->
 
